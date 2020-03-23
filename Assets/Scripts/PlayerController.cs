@@ -55,8 +55,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         orient();
-        Vector3 target_velocity = new Vector2(horizontalMovement * Time.fixedDeltaTime, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, target_velocity, ref velocity, smoothTime);
+        Vector3 targetVelocity = new Vector2(horizontalMovement * Time.fixedDeltaTime, rb.velocity.y);
+        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, smoothTime);
 
         if (isJumping)
         {
