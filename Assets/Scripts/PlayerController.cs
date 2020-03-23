@@ -67,18 +67,18 @@ public class PlayerController : MonoBehaviour
 
     private void orient()
     {
-        Vector3 scale = transform.localScale;
+        Quaternion lookRotation = transform.rotation;
         
         if (facingRight)
         {
-            scale.x = Mathf.Abs(scale.x);
+            lookRotation.y = 0;
         }
         else
         {
-            scale.x = - Mathf.Abs(scale.x);
+            lookRotation.y = 180;
         }
 
-        transform.localScale = scale;
+        transform.rotation = lookRotation;
     }
 
     private void animate()
