@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8333433784429076089}
   - component: {fileID: 8333433784429076088}
   - component: {fileID: 8333433784429076039}
+  - component: {fileID: 1583981291}
   m_Layer: 8
   m_Name: Zombie_Female
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1033041905
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eae5485024c6235499fef6972e871233, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -138,7 +139,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1184175, y: -0.3997023}
+  m_Offset: {x: 0.009619772, y: -0.3997023}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -149,7 +150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.0738707, y: 4.664296}
+  m_Size: {x: 2.856275, y: 4.664296}
   m_EdgeRadius: 0
 --- !u!114 &8333433784429076039
 MonoBehaviour:
@@ -163,7 +164,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dd980578d2c124aa0dcd2dcbc86bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   speed: 100
   smoothTime: 0.25
-  minDistance: 1
+  damage: 10
+  minDistance: 0.7
+--- !u!114 &1583981291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333433784429076038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc752c8d21595e4299b4f3e8e3f672a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20

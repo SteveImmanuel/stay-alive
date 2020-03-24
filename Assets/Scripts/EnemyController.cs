@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public Transform target;
     public float speed = 100f;
     public float smoothTime = 0.25f;
-    public float minDistance = 1f;
+    public int damage = 10;
+    public float minDistance = .7f;
 
+    private Transform target;
     private Rigidbody2D rb;
     private Animator animator;
     private float movementSpeed;
@@ -23,20 +24,35 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+    }
+
     private void Update()
     {
-        distance = target.position.x - transform.position.x;
-        if (distance > 0)
+        if (target != null)
         {
-            facingRight = 0;
+            distance = target.position.x - transform.position.x;
+            if (distance > 0)
+            {
+                facingRight = 0;
+            }
+            else
+            {
+                facingRight = 1;
+            }
+
+            isChasing = Mathf.Abs(distance) > minDistance ? true : false;
+            animator.SetBool("isChasing", isChasing);
         }
         else
         {
-            facingRight = 1;
+            animator.SetBool("isTargetDead", true);
         }
 
-        isChasing = Mathf.Abs(distance) > minDistance ? true : false;
-        animate();
+
+       
     }
 
     void FixedUpdate()
@@ -50,10 +66,18 @@ public class EnemyController : MonoBehaviour
             Vector3 targetVelocity = transform.right * speed * Time.fixedDeltaTime;
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, smoothTime);
         }
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
-    private void animate()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        animator.SetBool("isChasing", isChasing);
+        if (collision.collider.tag == "Player")
+        {
+            Health player = collision.transform.GetComponent<Health>();
+            player.takeDamage(damage);
+        }
     }
 }

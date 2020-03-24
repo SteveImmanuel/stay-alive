@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5239310112099292188}
   - component: {fileID: 5239310112099292191}
   - component: {fileID: 5239310112099292177}
+  - component: {fileID: -165158168483583199}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -103,8 +104,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1008701917
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 10f6895d863e7d44e8c5ec0562d75d9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14201689, y: -0.09469938}
+  m_Offset: {x: -0.24, y: -0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -141,7 +142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9243202, y: 4.6130056}
+  m_Size: {x: 2.57, y: 4.64}
   m_EdgeRadius: 0
 --- !u!50 &5239310112099292189
 Rigidbody2D:
@@ -196,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 250
-  smoothTime: 0.25
+  smoothTime: 0.15
   jumpForce: 300
 --- !u!114 &5239310112099292177
 MonoBehaviour:
@@ -210,7 +211,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70579a33e9f3b9d4f8e17a4ab43ce215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 0
   bulletPrefab: {fileID: 8918291486405993817, guid: 83c87374c6538334bb76dba73f4ff246,
     type: 3}
   spawnPoint: {fileID: 5239310111478260774}
+--- !u!114 &-165158168483583199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239310112099292190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc752c8d21595e4299b4f3e8e3f672a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
