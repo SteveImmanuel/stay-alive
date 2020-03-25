@@ -8,6 +8,7 @@ public class BulletMove : MonoBehaviour
     public float smoothTime = 0.25f;
     public GameObject muzzlePrefab;
     public int damage = 10;
+    public float forceImpact = 3f;
 
 
     private Rigidbody2D rb;
@@ -38,6 +39,16 @@ public class BulletMove : MonoBehaviour
 
             Health enemy = collision.GetComponent<Health>();
             enemy.takeDamage(damage);
+
+            if (!enemy.isDead())
+            {
+                Vector2 force = new Vector2(forceImpact, 2f);
+                if(collision.transform.position.x < transform.position.x)
+                {
+                    force.x *= -1;
+                }
+                collision.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+            }
 
             Destroy(gameObject);
         }

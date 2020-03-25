@@ -6,7 +6,6 @@ public class EnemyController : MonoBehaviour
 {
     public float speed = 100f;
     public float smoothTime = 0.25f;
-    public int damage = 10;
     public float minDistance = .7f;
 
     private Transform target;
@@ -17,11 +16,13 @@ public class EnemyController : MonoBehaviour
     private float distance;
     private Vector3 velocity = Vector3.zero;
     private bool isChasing = true;
+    private EnemyAttack attackController;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        attackController = GetComponent<EnemyAttack>();
     }
 
     private void Start()
@@ -44,16 +45,19 @@ public class EnemyController : MonoBehaviour
             }
 
             isChasing = Mathf.Abs(distance) > minDistance ? true : false;
-            animator.SetBool("isChasing", isChasing);
+            if (attackController.getAttackState() == false)
+            {
+                animator.SetBool("isChasing", isChasing);
+                attackController.setAttack(!isChasing);
+            }
         }
         else
         {
             isChasing = false;
+            animator.SetBool("isChasing", false);
             animator.SetBool("isTargetDead", true);
+            attackController.setAttack(false);
         }
-
-
-       
     }
 
     void FixedUpdate()
@@ -73,12 +77,4 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Player")
-        {
-            Health player = collision.transform.GetComponent<Health>();
-            player.takeDamage(damage);
-        }
-    }
 }

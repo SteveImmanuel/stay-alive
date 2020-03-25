@@ -158,3 +158,4 @@ MonoBehaviour:
   muzzlePrefab: {fileID: 3410768821058166452, guid: 3f17a04cca5ec4847a76e36cde3f7b1d,
     type: 3}
   damage: 10
+  forceImpact: 3
