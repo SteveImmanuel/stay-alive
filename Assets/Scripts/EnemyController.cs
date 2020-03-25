@@ -48,6 +48,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
+            isChasing = false;
             animator.SetBool("isTargetDead", true);
         }
 
