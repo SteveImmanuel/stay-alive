@@ -40,15 +40,12 @@ public class BulletMove : MonoBehaviour
             Health enemy = collision.GetComponent<Health>();
             enemy.takeDamage(damage);
 
-            if (!enemy.isDead())
+            Vector2 force = new Vector2(forceImpact, 2f);
+            if(collision.transform.position.x < transform.position.x)
             {
-                Vector2 force = new Vector2(forceImpact, 2f);
-                if(collision.transform.position.x < transform.position.x)
-                {
-                    force.x *= -1;
-                }
-                collision.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+                force.x *= -1;
             }
+            collision.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
 
             Destroy(gameObject);
         }

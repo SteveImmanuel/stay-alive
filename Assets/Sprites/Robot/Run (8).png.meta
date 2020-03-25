@@ -92,12 +92,12 @@ TextureImporter:
       name: Run (8)_0
       rect:
         serializedVersion: 2
-        x: 129
+        x: 0
         y: 25
-        width: 313
+        width: 567
         height: 477
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
