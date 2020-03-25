@@ -31,12 +31,15 @@ public class BulletMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag != "Player")
+        {
+            GameObject impact = Instantiate(muzzlePrefab, transform.position, transform.rotation);
+            Destroy(impact, .4f);
+            Destroy(gameObject);
+        }
+
         if (collision.tag == "Enemy")
         {
-            Vector3 impactPoint = transform.position + transform.right * 0.2f;
-            GameObject impact = Instantiate(muzzlePrefab, impactPoint, transform.rotation);
-            Destroy(impact, .4f);
-
             Health enemy = collision.GetComponent<Health>();
             enemy.takeDamage(damage);
 
@@ -47,7 +50,7 @@ public class BulletMove : MonoBehaviour
             }
             collision.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
 
-            Destroy(gameObject);
         }
+
     }
 }
