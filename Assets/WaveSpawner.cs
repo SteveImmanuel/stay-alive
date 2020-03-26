@@ -6,10 +6,27 @@ public class WaveSpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
     public GameObject rechargeStationPrefab;
+    public float timeBetweenWave = 5f;
 
     private List<Transform> enemyPoint = new List<Transform>();
     private List<Transform> energyPoint = new List<Transform>();
-    private int waveIndex = 1;
+    private int waveIndex = 0;
+    private int enemyAlive = 0;
+    private float elapsedTime = 0f;
+
+    public static WaveSpawner instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -23,20 +40,27 @@ public class WaveSpawner : MonoBehaviour
                 energyPoint.Add(child);
             }
         }
-
-        Debug.Log("spawning");
-        spawnEnemy();
-        spawnEnergy();
     }
 
     void Update()
     {
-        
+        elapsedTime += Time.deltaTime;
+
+        if (elapsedTime >= timeBetweenWave || enemyAlive <= 0)
+        {
+            waveIndex++;
+            Debug.Log("wave-" + waveIndex + " begins");
+            spawnEnemy();
+            spawnEnergy();
+            elapsedTime = 0f;
+        }
     }
 
     private void spawnEnemy()
     {
-        for(int i = 0; i < getTotalEnemy(); i++)
+        enemyAlive += getTotalEnemy();
+        Debug.Log("enemy alive:" + enemyAlive);
+        for (int i = 0; i < getTotalEnemy(); i++)
         {
             int enemyPrefabIdx = Random.Range(0, enemyPrefab.Length);
             int locationIdx = Random.Range(0, enemyPoint.Count);
@@ -63,5 +87,11 @@ public class WaveSpawner : MonoBehaviour
     private int getTotalEnergy()
     {
         return 3 * waveIndex;
+    }
+
+    public void reduceTotalEnemy()
+    {
+        enemyAlive--;
+        Debug.Log("enemy alive:" + enemyAlive);
     }
 }

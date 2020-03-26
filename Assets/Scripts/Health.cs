@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     private Animator animator;
     private bool dead = false;
     private Material material;
-    private float fade = 2f;
+    private float fade = 0f;
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
     public void takeDamage(int damage)
     {
         health -= damage;
-        if (health <= 0)
+        if (health <= 0 && !dead)
         {
             die();
         }
@@ -31,6 +31,14 @@ public class Health : MonoBehaviour
         {
             fade -= Time.deltaTime;
             material.SetFloat("_Fade", fade);
+        }
+        else
+        {
+            if (fade < 2f)
+            {
+                fade += Time.deltaTime;
+                material.SetFloat("_Fade", fade);
+            }
         }
     }
 
@@ -50,6 +58,7 @@ public class Health : MonoBehaviour
         else if(gameObject.tag == "Enemy")
         {
             GetComponent<EnemyController>().enabled = false;
+            WaveSpawner.instance.reduceTotalEnemy();
         }
         animator.SetBool("isDead", true);
         Destroy(gameObject, 1.5f);

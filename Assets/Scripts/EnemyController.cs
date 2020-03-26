@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     public float speed = 100f;
     public float smoothTime = 0.25f;
     public float minDistance = .7f;
+    public float lookRadius = 5f;
 
     private Transform target;
     private Rigidbody2D rb;
@@ -15,7 +16,7 @@ public class EnemyController : MonoBehaviour
     private int facingRight = 1;
     private float distance;
     private Vector3 velocity = Vector3.zero;
-    private bool isChasing = true;
+    private bool isChasing = false;
     private EnemyAttack attackController;
 
     private void Awake()
@@ -34,21 +35,31 @@ public class EnemyController : MonoBehaviour
     {
         if (target != null)
         {
-            distance = target.position.x - transform.position.x;
-            if (distance > 0)
+            if (Vector3.Distance(target.transform.position, transform.position) <= lookRadius)
             {
-                facingRight = 0;
+                distance = target.position.x - transform.position.x;
+                if (distance > 0)
+                {
+                    facingRight = 0;
+                }
+                else
+                {
+                    facingRight = 1;
+                }
+
+                isChasing = Mathf.Abs(distance) > minDistance ? true : false;
+                if (attackController.getAttackState() == false)
+                {
+                    animator.SetBool("isChasing", isChasing);
+                    attackController.setAttack(!isChasing);
+                }
+                animator.SetBool("isTargetReachable", true);
             }
             else
             {
-                facingRight = 1;
-            }
-
-            isChasing = Mathf.Abs(distance) > minDistance ? true : false;
-            if (attackController.getAttackState() == false)
-            {
-                animator.SetBool("isChasing", isChasing);
-                attackController.setAttack(!isChasing);
+                isChasing = false;
+                animator.SetBool("isChasing", false);
+                animator.SetBool("isTargetReachable", false);
             }
         }
         else
@@ -73,8 +84,13 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0, rb.velocity.y);
         }
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
 }
