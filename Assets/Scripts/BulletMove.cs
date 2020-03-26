@@ -18,8 +18,6 @@ public class BulletMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameObject muzzle = Instantiate(muzzlePrefab, transform.position, transform.rotation);
-        Destroy(muzzle, .4f);
     }
 
     // Update is called once per frame

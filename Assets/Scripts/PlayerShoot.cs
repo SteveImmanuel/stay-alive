@@ -21,7 +21,6 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
-            Debug.Log("fire pressed");
             animator.SetBool("isShooting", true);
             Invoke("stopShooting", .35f);
         }
