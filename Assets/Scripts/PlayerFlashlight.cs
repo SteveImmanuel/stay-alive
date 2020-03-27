@@ -24,6 +24,14 @@ public class PlayerFlashlight : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             isPowerOn = !isPowerOn;
+            if (isPowerOn)
+            {
+                PlayerEnergy.instance.setEnergyRate(-2f);
+            }
+            else
+            {
+                PlayerEnergy.instance.setEnergyRate(-1f);
+            }
         }
     }
 

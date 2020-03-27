@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 5239310112099292191}
   - component: {fileID: 5239310112099292177}
   - component: {fileID: 559054618}
+  - component: {fileID: 9213708}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -288,6 +289,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8918291486405993817, guid: 83c87374c6538334bb76dba73f4ff246,
     type: 3}
   spawnPoint: {fileID: 5239310111478260774}
+  energyCost: 2
 --- !u!114 &559054618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,3 +306,19 @@ MonoBehaviour:
   minRadius: 4
   maxRadius: 15
   speedFactor: 20
+--- !u!114 &9213708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239310112099292190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10aef76863807324aab898b2d5362b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 100
+  maxEnergy: 100
+  energyRate: -1
+  energyBar: {fileID: 0}
