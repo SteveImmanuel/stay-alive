@@ -320,5 +320,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energy: 100
   maxEnergy: 100
-  energyRate: -1
+  defaultEnergyRate: -0.5
   energyBar: {fileID: 0}
