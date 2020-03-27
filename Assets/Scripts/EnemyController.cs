@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public const float baseSpeed = 150f;
+
     public float speed = 100f;
     public float smoothTime = 0.25f;
     public float minDistance = .7f;
@@ -24,6 +26,7 @@ public class EnemyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         attackController = GetComponent<EnemyAttack>();
+        animator.speed = speed / baseSpeed;
     }
 
     private void Start()
@@ -35,10 +38,10 @@ public class EnemyController : MonoBehaviour
     {
         if (target != null)
         {
-            if (Vector3.Distance(target.transform.position, transform.position) <= lookRadius)
+            float distance = Vector3.Distance(target.transform.position, transform.position);
+            if (distance <= lookRadius)
             {
-                distance = target.position.x - transform.position.x;
-                if (distance > 0)
+                if (target.position.x - transform.position.x > 0)
                 {
                     facingRight = 0;
                 }

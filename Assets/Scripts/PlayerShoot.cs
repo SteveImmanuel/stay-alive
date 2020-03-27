@@ -6,6 +6,7 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform spawnPoint;
+    public float energyCost = 2f;
 
     private Animator animator;
 
@@ -20,6 +21,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            PlayerEnergy.instance.takeDamage(energyCost);
             Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
             animator.SetBool("isShooting", true);
             Invoke("stopShooting", .35f);

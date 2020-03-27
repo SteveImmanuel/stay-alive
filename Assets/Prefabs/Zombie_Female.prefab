@@ -166,10 +166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dd980578d2c124aa0dcd2dcbc86bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
+  speed: 300
   smoothTime: 0.25
   minDistance: 1.36
-  lookRadius: 5
+  lookRadius: 8
 --- !u!114 &1268994509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  attackDelay: 1
+  attackDelay: 0.2
   forceImpact: 4
 --- !u!114 &1779779541448238333
 MonoBehaviour:
@@ -197,4 +197,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a834fe022d4c304680ec821d22bea5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 10
