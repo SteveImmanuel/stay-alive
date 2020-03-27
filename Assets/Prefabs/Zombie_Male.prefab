@@ -169,6 +169,7 @@ MonoBehaviour:
   speed: 150
   smoothTime: 0.25
   minDistance: 1.2
+  lookRadius: 5
 --- !u!114 &5089135817127912377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8647811752577377337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bc752c8d21595e4299b4f3e8e3f672a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a834fe022d4c304680ec821d22bea5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20

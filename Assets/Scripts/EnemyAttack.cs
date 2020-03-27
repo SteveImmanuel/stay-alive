@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public int damage = 10;
+    public float damage = 10f;
     public float attackDelay = 1f;
     public float forceImpact = 4f;
     
@@ -62,7 +62,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
         {
-            Health player = collision.transform.GetComponent<Health>();
+            PlayerEnergy player = collision.transform.GetComponent<PlayerEnergy>();
             player.takeDamage(damage);
 
             if (!player.isDead())

@@ -38,7 +38,7 @@ public class BulletMove : MonoBehaviour
 
         if (collision.tag == "Enemy")
         {
-            Health enemy = collision.GetComponent<Health>();
+            EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
             enemy.takeDamage(damage);
 
             Vector2 force = new Vector2(forceImpact, 2f);
