@@ -9,10 +9,10 @@ public class ListController : MonoBehaviour
     [System.Serializable]
     private class UserData
     {
-        public string _id;
-        public string nim;
-        public string username;
-        public int score;
+        public string _id="";
+        public string nim = "";
+        public string username = "";
+        public int score=-1;
     }
 
     public TMPro.TextMeshProUGUI nameText;

@@ -18,6 +18,6 @@ public static class JsonHelper
     [System.Serializable]
     private class Wrapper<T>
     {
-        public T[] items;
+        public T[] items=null;
     }
 }

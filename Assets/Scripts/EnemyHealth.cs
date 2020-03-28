@@ -11,17 +11,20 @@ public class EnemyHealth : MonoBehaviour
     private bool dead = false;
     private Material material;
     private float fade = 0f;
+    private CharacterAudio enemyAudio;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         material = GetComponent<SpriteRenderer>().material;
+        enemyAudio = GetComponent<CharacterAudio>();
         StartCoroutine(spawn());
     }
 
     public void takeDamage(int damage)
     {
         health -= damage;
+        enemyAudio.playSfxSound();
         if (health <= 0 && !dead)
         {
             die();

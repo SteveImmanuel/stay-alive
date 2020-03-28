@@ -15,11 +15,13 @@ public class PlayerController : MonoBehaviour
     private bool isJumping = false;
     private bool isGrounded = false;
     private bool facingRight = true;
+    private CharacterAudio playerAudio;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerAudio = GetComponent<CharacterAudio>();
     }
 
     // Update is called once per frame
@@ -79,6 +81,14 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetFloat("speed", Mathf.Abs(horizontalMovement));
         animator.SetBool("isJumping", !isGrounded);
+        if (Mathf.Abs(horizontalMovement) > 0.01 && isGrounded)
+        {
+            playerAudio.setRunning(true);
+        }
+        else
+        {
+            playerAudio.setRunning(false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private bool isChasing = false;
     private EnemyAttack attackController;
+    private CharacterAudio enemyAudio;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         attackController = GetComponent<EnemyAttack>();
         animator.speed = speed / baseSpeed;
+        enemyAudio = GetComponent<CharacterAudio>();
     }
 
     private void Start()
@@ -62,12 +64,14 @@ public class EnemyController : MonoBehaviour
                     attackController.setAttack(!isChasing);
                 }
                 animator.SetBool("isTargetReachable", true);
+                enemyAudio.setRunning(isChasing);
             }
             else
             {
                 isChasing = false;
                 animator.SetBool("isChasing", false);
                 animator.SetBool("isTargetReachable", false);
+                enemyAudio.setRunning(false);
             }
         }
         else
@@ -76,6 +80,7 @@ public class EnemyController : MonoBehaviour
             animator.SetBool("isChasing", false);
             animator.SetBool("isTargetDead", true);
             attackController.setAttack(false);
+            enemyAudio.setRunning(false);
         }
     }
 

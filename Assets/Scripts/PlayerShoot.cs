@@ -9,11 +9,13 @@ public class PlayerShoot : MonoBehaviour
     public float energyCost = 2f;
 
     private Animator animator;
+    private CharacterAudio playerAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        playerAudio = GetComponent<CharacterAudio>();
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class PlayerShoot : MonoBehaviour
             PlayerEnergy.instance.takeDamage(energyCost);
             Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
             animator.SetBool("isShooting", true);
+            playerAudio.playSfxSound(.18f);
             Invoke("stopShooting", .35f);
         }
     }

@@ -29,13 +29,6 @@ public class BulletMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != "Player" && collision.tag != "RechargeStation")
-        {
-            GameObject impact = Instantiate(muzzlePrefab, transform.position, transform.rotation);
-            Destroy(impact, .4f);
-            Destroy(gameObject);
-        }
-
         if (collision.tag == "Enemy")
         {
             EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
@@ -48,6 +41,13 @@ public class BulletMove : MonoBehaviour
             }
             collision.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
 
+        }
+
+        if (collision.tag != "Player" && collision.tag != "RechargeStation")
+        {
+            GameObject impact = Instantiate(muzzlePrefab, transform.position, transform.rotation);
+            Destroy(impact, 1f);
+            Destroy(gameObject);
         }
 
     }
