@@ -23,6 +23,14 @@ public class LevelLoader : MonoBehaviour
 
     void Start()
     {
+        if(SceneManager.GetActiveScene().buildIndex > 1) // not in main menu or highscore board
+        {
+            AudioManager.instance.stopMainTheme();
+        }
+        else
+        {
+            AudioManager.instance.playMainTheme();
+        }
         animator = GetComponentInChildren<Animator>();
     }
 

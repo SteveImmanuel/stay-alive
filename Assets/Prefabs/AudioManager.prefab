@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5084689358699332926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5084689358699332920}
+  - component: {fileID: 5084689358699332927}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5084689358699332920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084689358699332926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 652.67566, y: 50.203934, z: -51.125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5084689358699332927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084689358699332926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f43db40b44db94cb8ba55001f67e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundList:
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: c24fff81e3e63c3499716b64cdaf6032, type: 3}
+    loop: 1
+    volume: 0.722
+    pitch: 1
+  - name: BackgroundGame
+    clip: {fileID: 8300000, guid: 93abc65fb0a7d9a47bb2f33a425869bb, type: 3}
+    loop: 0
+    volume: 0.213
+    pitch: 1
+  - name: RandomNoise1
+    clip: {fileID: 8300000, guid: af6edb08e1f686041a968120f681aff9, type: 3}
+    loop: 0
+    volume: 0.732
+    pitch: 1
+  - name: RandomNoise2
+    clip: {fileID: 8300000, guid: 2d4abed0203b15f4e8d4c72eeb4d8d16, type: 3}
+    loop: 0
+    volume: 0.732
+    pitch: 1
+  - name: RandomNoise3
+    clip: {fileID: 8300000, guid: 0045f76525dcdd34dbf31cb4fa3563a5, type: 3}
+    loop: 0
+    volume: 0.732
+    pitch: 1
+  - name: RandomNoise4
+    clip: {fileID: 8300000, guid: 57f5f9fc49e59cb4ca4ae0d069d09f33, type: 3}
+    loop: 0
+    volume: 0.732
+    pitch: 1
+  - name: NewWave
+    clip: {fileID: 8300000, guid: f6dbb0ca03157fc468a0e05ae6c7f510, type: 3}
+    loop: 0
+    volume: 0.637
+    pitch: 1
+  - name: RandomNoise3
+    clip: {fileID: 8300000, guid: af6edb08e1f686041a968120f681aff9, type: 3}
+    loop: 0
+    volume: 0.732
+    pitch: 1
