@@ -68,13 +68,14 @@ public class UIController : MonoBehaviour
     IEnumerator endSequence()
     {
         waveSpawner.enabled = false;
+        scoreCounter.stopScoreAddition();
         scoreCounter.enabled = false;
         statusCanvas.GetComponent<Animator>().SetTrigger("Change");
         yield return new WaitForSeconds(.5f);
         statusCanvas.SetActive(false);
         messageCanvas.GetComponent<MessageCanvas>().displayGameOver();
-        messageCanvas.GetComponent<MessageCanvas>().scoreFinalText.text = "Wave Survived: " + scoreCounter.getScore();
-        messageCanvas.GetComponent<MessageCanvas>().waveSurvivedText.text = "Total Score: " + waveSpawner.getWaveIdx();
+        messageCanvas.GetComponent<MessageCanvas>().scoreFinalText.text = "Total Score: " + scoreCounter.getScore();
+        messageCanvas.GetComponent<MessageCanvas>().waveSurvivedText.text = "Wave Survived: " + waveSpawner.getWaveIdx();
         messageCanvas.SetActive(true);
     }
 
