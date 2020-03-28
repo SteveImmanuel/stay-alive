@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int health = 20;
+    public int score = 50;
+
     private Animator animator;
     private bool dead = false;
     private Material material;
@@ -65,6 +67,7 @@ public class EnemyHealth : MonoBehaviour
 
         GetComponent<EnemyController>().enabled = false;
         WaveSpawner.instance.reduceTotalEnemy();
+        ScoreCounter.instance.addScore(score);
 
         animator.SetBool("isDead", true);
         Destroy(gameObject, 1.5f);

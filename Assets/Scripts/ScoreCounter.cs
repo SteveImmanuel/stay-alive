@@ -5,27 +5,47 @@ using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public Text scoreText;
     public int scoreMultiplier;
 
-    private int score = 2;
-    private float elapsedTime;
-    
+    private int score = 0;
+    public static ScoreCounter instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        InvokeRepeating("addScoreIndefinitely", 0f, .5f);
+    }
+
+    public void stopScoreAddition()
+    {
+        CancelInvoke("addScoreIndefinitely");
+    }
+
+    private void addScoreIndefinitely()
+    {
+        score += scoreMultiplier;
+        UIController.instance.setScoreText(score);
+    }
+
     public void addScore(int addition)
     {
         score += addition;
-        scoreText.text = "Score: " + score;
+        UIController.instance.setScoreText(score);
     }
 
-    public void setScore(int newScore)
+    public int getScore()
     {
-        score = newScore;
-        scoreText.text = "Score: " + score;
-    }
-
-    void Update()
-    {
-        elapsedTime += Time.deltaTime;
-        setScore(Mathf.RoundToInt(elapsedTime * scoreMultiplier));
+        return score;
     }
 }

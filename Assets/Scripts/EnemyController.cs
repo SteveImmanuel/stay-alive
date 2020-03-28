@@ -31,7 +31,12 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindWithTag("Player").transform;
+        GameObject player = GameObject.FindWithTag("Player");
+        target = null;
+        if (player != null)
+        {
+            target = player.transform;
+        }
     }
 
     private void Update()

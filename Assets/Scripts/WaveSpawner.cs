@@ -8,8 +8,6 @@ public class WaveSpawner : MonoBehaviour
     public GameObject[] enemyPrefab;
     public GameObject rechargeStationPrefab;
     public float timeBetweenWave = 5f;
-    public Text waveNowText;
-    public GameObject waveCounter;
 
     private List<Transform> enemyPoint = new List<Transform>();
     private List<Transform> energyPoint = new List<Transform>();
@@ -52,43 +50,26 @@ public class WaveSpawner : MonoBehaviour
         {
             if (timeUntilNextWave <= 0)
             {
-                hideCountdown();
+                UIController.instance.hideCountdown();
                 waveIndex++;
                 spawnEnemy();
                 spawnEnergy();
                 timeUntilNextWave = timeBetweenWave;
-                waveNowText.text = "WAVE-" + waveIndex;
+                UIController.instance.setWaveNowText(waveIndex);
             }
             else
             {
                 timeUntilNextWave -= Time.deltaTime;
-                showCountdown();
+                UIController.instance.showCountdown(Mathf.RoundToInt(timeUntilNextWave));
             }
 
         }
     }
 
-    private void showCountdown()
-    {
-        waveCounter.SetActive(true);
-        waveCounter.GetComponent<Animator>().SetBool("countdownOver", false);
-        waveCounter.GetComponentInChildren<Text>().text = "Next wave begins in\n" + Mathf.RoundToInt(timeUntilNextWave);
-    }
-
-    private void hideCountdown()
-    {
-        waveCounter.GetComponent<Animator>().SetBool("countdownOver", true);
-        Invoke("disableCountdown", .5f);
-    }
-
-    private void disableCountdown()
-    {
-        waveCounter.SetActive(false);
-    }
-
     private void spawnEnemy()
     {
         enemyAlive += getTotalEnemy();
+        UIController.instance.setZombieAliveText(enemyAlive);
         for (int i = 0; i < getTotalEnemy(); i++)
         {
             int enemyPrefabIdx = Random.Range(0, enemyPrefab.Length);
@@ -122,6 +103,11 @@ public class WaveSpawner : MonoBehaviour
     public void reduceTotalEnemy()
     {
         enemyAlive--;
-        Debug.Log("enemy alive:" + enemyAlive);
+        UIController.instance.setZombieAliveText(enemyAlive);
+    }
+
+    public int getWaveIdx()
+    {
+        return waveIndex;
     }
 }

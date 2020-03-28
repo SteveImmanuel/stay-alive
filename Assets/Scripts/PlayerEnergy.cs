@@ -7,7 +7,6 @@ public class PlayerEnergy : MonoBehaviour
     public float energy = 100;
     public float maxEnergy = 100;
     public float defaultEnergyRate = -0.5f;
-    public EnergyBar energyBar;
 
     private float energyRate = -0.5f;
     private Animator animator;
@@ -36,14 +35,14 @@ public class PlayerEnergy : MonoBehaviour
 
     private void Start()
     {
-        energyBar.setMaxEnergy(maxEnergy);
+        UIController.instance.setEnergyBarMax(maxEnergy);
     }
 
     public void takeDamage(float damage)
     {
         energy -= damage;
         energy = Mathf.Clamp(energy, 0, maxEnergy);
-        energyBar.setEnergy(energy);
+        UIController.instance.setEnergyBar(energy);
         
         if (energy <= 0 && !dead)
         {
@@ -91,11 +90,11 @@ public class PlayerEnergy : MonoBehaviour
 
         if (energyRate > 0)
         {
-            energyBar.glowImage();
+            UIController.instance.glowEnergyBar();
         }
         else
         {
-            energyBar.unglowImage();
+            UIController.instance.unglowEnergyBar();
         }
     }
 
@@ -112,4 +111,5 @@ public class PlayerEnergy : MonoBehaviour
         animator.SetBool("isDead", true);
         Destroy(gameObject, 1.5f);
     }
+
 }

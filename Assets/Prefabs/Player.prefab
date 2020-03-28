@@ -321,4 +321,3 @@ MonoBehaviour:
   energy: 100
   maxEnergy: 100
   defaultEnergyRate: -0.5
-  energyBar: {fileID: 0}
