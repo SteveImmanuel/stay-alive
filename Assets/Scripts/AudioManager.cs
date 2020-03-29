@@ -73,6 +73,7 @@ public class Sound
 public class AudioManager : MonoBehaviour
 {
     [SerializeField]
+    public AudioMixer audioMixer;
     public AudioMixerGroup musicMixerGroup;
     public Sound[] soundList;
     public static AudioManager instance;
@@ -97,6 +98,15 @@ public class AudioManager : MonoBehaviour
             sound.setSource(temp.AddComponent<AudioSource>());
             sound.setOutput(musicMixerGroup);
         }
+    }
+
+    private void Start()
+    {
+        float musicVolume = PlayerPrefs.GetFloat("musicVolume");
+        float sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
+
+        audioMixer.SetFloat("musicVolume", musicVolume);
+        audioMixer.SetFloat("sfxVolume", sfxVolume);
     }
 
     public void play(string name, bool fade=false, bool forcePlay = false)
@@ -157,5 +167,17 @@ public class AudioManager : MonoBehaviour
         {
             stop(sound.name, true);
         }
+    }
+
+    public void setMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("musicVolume", volume);
+        PlayerPrefs.SetFloat("musicVolume", volume);
+    }
+
+    public void setSfxVolume(float volume)
+    {
+        audioMixer.SetFloat("sfxVolume", volume);
+        PlayerPrefs.SetFloat("sfxVolume", volume);
     }
 }
