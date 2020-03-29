@@ -22,7 +22,8 @@ public class RechargeStation : MonoBehaviour
     {
         if (timeSpent >= absorbTime)
         {
-            PlayerEnergy.instance.setEnergyRate(-1f);
+            Debug.Log("recharge station destroy");
+            PlayerEnergy.instance.setDefaultEnergyRate();
             Destroy(gameObject);
             particleModule.loop = false;
         }

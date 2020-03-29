@@ -30,7 +30,7 @@ public class PlayerFlashlight : MonoBehaviour
             }
             else
             {
-                PlayerEnergy.instance.setDefaultEnergyRate();
+                PlayerEnergy.instance.setEnergyRate(PlayerEnergy.instance.defaultEnergyRate);
             }
         }
     }
