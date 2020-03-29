@@ -918,16 +918,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 5084689358699332927, guid: 38000ba05d1df5b4e8a5bf264c262fbf,
-        type: 3}
-      propertyPath: musicVolumeSlider
-      value: 
-      objectReference: {fileID: 766029739}
-    - target: {fileID: 5084689358699332927, guid: 38000ba05d1df5b4e8a5bf264c262fbf,
-        type: 3}
-      propertyPath: sfxVolumeSlider
-      value: 
-      objectReference: {fileID: 47052139}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38000ba05d1df5b4e8a5bf264c262fbf, type: 3}
 --- !u!114 &461731780 stripped
@@ -4453,7 +4443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Build Version: 0.9.3'
+  m_text: 'Build Version: 1.0.0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b5fb4a7ca1dcb374486415513316d4e8, type: 2}
   m_sharedMaterial: {fileID: -6565368366104815949, guid: b5fb4a7ca1dcb374486415513316d4e8,

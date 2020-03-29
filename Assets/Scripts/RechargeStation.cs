@@ -7,16 +7,8 @@ public class RechargeStation : MonoBehaviour
     public float totalEnergy = 10f;
     public float absorbTime = 1f;
 
-    private ParticleSystem particle;
-    private ParticleSystem.MainModule particleModule;
     private bool playerInside = false;
     private float timeSpent = 0;
-
-    void Start()
-    {
-        particle = GetComponentInChildren<ParticleSystem>();
-        particleModule = particle.main;
-    }
 
     void Update()
     {
@@ -24,8 +16,9 @@ public class RechargeStation : MonoBehaviour
         {
             Debug.Log("recharge station destroy");
             PlayerEnergy.instance.setDefaultEnergyRate();
-            Destroy(gameObject);
-            particleModule.loop = false;
+            timeSpent = 0;
+            playerInside = false;
+            gameObject.SetActive(false);
         }
 
         if (playerInside)

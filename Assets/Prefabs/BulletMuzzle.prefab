@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3410768821058166454}
   - component: {fileID: 3410768821058166455}
   - component: {fileID: -4128930416004507171}
+  - component: {fileID: 3258451702345942378}
   m_Layer: 0
   m_Name: BulletMuzzle
   m_TagString: Untagged
@@ -111,7 +112,8 @@ AudioSource:
   m_GameObject: {fileID: 3410768821058166452}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -144139493582554438, guid: ba791fdf21add9d47b84fa53f2a538cd,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: f01c623f724825e44a923d1ae50256f2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -198,3 +200,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3258451702345942378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410768821058166452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5689a75875d0594496d9c28fec4b07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

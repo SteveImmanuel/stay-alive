@@ -9,6 +9,7 @@ public class BulletMove : MonoBehaviour
     public GameObject muzzlePrefab;
     public int damage = 10;
     public float forceImpact = 3f;
+    public string muzzleTag = "Muzzle";
 
 
     private Rigidbody2D rb;
@@ -45,9 +46,9 @@ public class BulletMove : MonoBehaviour
 
         if (collision.tag != "Player" && collision.tag != "RechargeStation")
         {
-            GameObject impact = Instantiate(muzzlePrefab, transform.position, transform.rotation);
-            Destroy(impact, 1f);
-            Destroy(gameObject);
+            GameObject impact = ObjectPooler.instance.instantiateFromPool(muzzleTag, transform.position, transform.rotation);
+            rb.velocity = Vector3.zero;
+            gameObject.SetActive(false);
         }
 
     }

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour, IPooledObject
 {
-    public int health = 20;
+    public int maxHealth = 20;
     public int score = 50;
 
+    private int health;
     private Animator animator;
     private bool dead = false;
     private Material material;
@@ -18,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
         animator = GetComponent<Animator>();
         material = GetComponent<SpriteRenderer>().material;
         enemyAudio = GetComponent<CharacterAudio>();
+        health = maxHealth;
         StartCoroutine(spawn());
     }
 
@@ -73,6 +75,22 @@ public class EnemyHealth : MonoBehaviour
         ScoreCounter.instance.addScore(score);
 
         animator.SetBool("isDead", true);
-        Destroy(gameObject, 1.5f);
+        StartCoroutine(dieSequence());
+        //Destroy(gameObject, 1.5f);
+    }
+
+    IEnumerator dieSequence()
+    {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
+    }
+
+    public void onInstantiate()
+    {
+        dead = false;
+        GetComponent<EnemyController>().enabled = true;
+        animator.SetBool("isDead", false);
+        StartCoroutine(spawn());
+        health = maxHealth;
     }
 }

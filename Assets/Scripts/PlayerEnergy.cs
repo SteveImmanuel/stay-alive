@@ -63,7 +63,7 @@ public class PlayerEnergy : MonoBehaviour
 
     public void setEnergyRate(float rate)
     {
-        if(rate < 0 && energyRate > 0)
+        if(rate < 0 && energyRate > 0 && !dead)
         {
             //still charging
             return;

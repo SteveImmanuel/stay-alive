@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public GameObject[] enemyPrefab;
-    public GameObject rechargeStationPrefab;
+    public string zombieMaleTag = "ZombieMale";
+    public string zombieFemaleTag = "ZombieFemale";
+    public string rechargeStationTag = "RechargeStation";
     public float timeBetweenWave = 5f;
 
     private List<Transform> enemyPoint = new List<Transform>();
@@ -73,9 +74,18 @@ public class WaveSpawner : MonoBehaviour
         UIController.instance.setZombieAliveText(enemyAlive);
         for (int i = 0; i < getTotalEnemy(); i++)
         {
-            int enemyPrefabIdx = Random.Range(0, enemyPrefab.Length);
+            int enemyType = Random.Range(0, 2);
             int locationIdx = Random.Range(0, enemyPoint.Count);
-            Instantiate(enemyPrefab[enemyPrefabIdx], enemyPoint[locationIdx].position, Quaternion.identity);
+            string enemyTag;
+            if (enemyType == 0)
+            {
+                enemyTag = zombieMaleTag;
+            }
+            else
+            {
+                enemyTag = zombieFemaleTag;
+            }
+            ObjectPooler.instance.instantiateFromPool(enemyTag, enemyPoint[locationIdx].position, Quaternion.identity);
         }
     }
 
@@ -84,7 +94,7 @@ public class WaveSpawner : MonoBehaviour
         for(int i=0; i < getTotalEnergy(); i++)
         {
             int locationIdx = Random.Range(0, energyPoint.Count);
-            Instantiate(rechargeStationPrefab, energyPoint[locationIdx].position, Quaternion.identity);
+            ObjectPooler.instance.instantiateFromPool(rechargeStationTag, energyPoint[locationIdx].position, Quaternion.identity);
         }
     }
 

@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public GameObject bulletPrefab;
+    public string bulletTag = "Bullet";
+    public string superBulletTag = "SuperBullet";
     public Transform spawnPoint;
     public float energyCost = 2f;
 
     private Animator animator;
     private CharacterAudio playerAudio;
 
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         playerAudio = GetComponent<CharacterAudio>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
             PlayerEnergy.instance.takeDamage(energyCost);
-            Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+            ObjectPooler.instance.instantiateFromPool(bulletTag, spawnPoint.position, spawnPoint.rotation);
             animator.SetBool("isShooting", true);
             playerAudio.playSfxSound(.18f);
             Invoke("stopShooting", .35f);

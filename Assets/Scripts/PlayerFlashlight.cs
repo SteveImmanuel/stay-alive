@@ -18,7 +18,6 @@ public class PlayerFlashlight : MonoBehaviour
         flashlight = GetComponentInChildren<UnityEngine.Experimental.Rendering.Universal.Light2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire2"))
