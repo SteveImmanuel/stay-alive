@@ -288,10 +288,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70579a33e9f3b9d4f8e17a4ab43ce215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8918291486405993817, guid: 83c87374c6538334bb76dba73f4ff246,
-    type: 3}
+  bulletTag: Bullet
+  superBulletTag: SuperBullet
   spawnPoint: {fileID: 5239310111478260774}
   energyCost: 2
+  holdTime: 1
 --- !u!114 &559054618
 MonoBehaviour:
   m_ObjectHideFlags: 0

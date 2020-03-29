@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -882,8 +882,16 @@ MonoBehaviour:
     prefab: {fileID: 8918291486405993817, guid: 83c87374c6538334bb76dba73f4ff246,
       type: 3}
     size: 10
-  - tag: Muzzle
+  - tag: BulletMuzzle
     prefab: {fileID: 3410768821058166452, guid: 3f17a04cca5ec4847a76e36cde3f7b1d,
+      type: 3}
+    size: 10
+  - tag: SuperBullet
+    prefab: {fileID: 8918291486405993817, guid: 9de0753a9d033ee4e870432c33f5431e,
+      type: 3}
+    size: 10
+  - tag: SuperBulletMuzzle
+    prefab: {fileID: 3410768821058166452, guid: 505b440355401be48876f5feec974a5f,
       type: 3}
     size: 10
 --- !u!4 &357113191
@@ -12084,6 +12092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239310112099292190, guid: 740b671de102f424d8da0411f393fb81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 740b671de102f424d8da0411f393fb81, type: 3}

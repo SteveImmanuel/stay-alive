@@ -6,7 +6,6 @@ public class BulletMove : MonoBehaviour
 {
     public float speed = 250f;
     public float smoothTime = 0.25f;
-    public GameObject muzzlePrefab;
     public int damage = 10;
     public float forceImpact = 3f;
     public string muzzleTag = "Muzzle";
@@ -15,13 +14,11 @@ public class BulletMove : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector3 targetVelocity = transform.right * speed * Time.fixedDeltaTime;
