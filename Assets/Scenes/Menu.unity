@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1004,7 +1004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -211}
+  m_AnchoredPosition: {x: 0, y: -243.4}
   m_SizeDelta: {x: 220, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517498124
@@ -1142,7 +1142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 208.99997}
+  m_AnchoredPosition: {x: 0, y: 238.38}
   m_SizeDelta: {x: -187.29999, y: -476.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565571289
@@ -4600,9 +4600,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You have to survive as long as possible.\n\nYour energy depletes over
-    time, \nwhen attacked by zombie, or when you shoot a bullet.\n\nYou can recharge
-    your energy by going to a recharge station.\n\nGood Luck and Have Fun!"
+  m_text: "OBJECTIVE\nYou have to survive as long as possible.\nYour energy depletes
+    over time, \nwhen attacked by zombie, or when you shoot a bullet.\nYou can recharge
+    your energy by going to a recharge station.\n\nCONTROL\nWASD/ Arrow Key - Move\nLeft-Ctrl
+    / Right Click - Shoot\nLeft-Alt - Toogle Flashlight\n\nGood Luck and Have Fun!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b5fb4a7ca1dcb374486415513316d4e8, type: 2}
   m_sharedMaterial: {fileID: -6565368366104815949, guid: b5fb4a7ca1dcb374486415513316d4e8,
@@ -4649,7 +4650,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 292
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4673,12 +4674,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1882225038}
-    characterCount: 214
+    characterCount: 315
     spriteCount: 0
-    spaceCount: 42
-    wordCount: 39
+    spaceCount: 58
+    wordCount: 55
     linkCount: 0
-    lineCount: 8
+    lineCount: 12
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
