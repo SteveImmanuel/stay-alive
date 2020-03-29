@@ -55,10 +55,10 @@ public class Sound
 
     public IEnumerator stopWithFade()
     {
-        for(float i = source.volume; i > 0; i -= .05f)
+        for(float i = source.volume; i > 0; i -= .1f)
         {
             source.volume = i;
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(.05f);
         }
         source.Stop();
         Debug.Log("audio stop");

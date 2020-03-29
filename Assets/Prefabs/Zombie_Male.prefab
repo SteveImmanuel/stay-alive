@@ -124,7 +124,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.5
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a834fe022d4c304680ec821d22bea5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  maxHealth: 20
   score: 50
 --- !u!114 &1126081132
 MonoBehaviour:
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   attackDelay: 1
-  forceImpact: 10
+  forceImpact: 7
 --- !u!82 &2475506330644127970
 AudioSource:
   m_ObjectHideFlags: 0

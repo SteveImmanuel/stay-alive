@@ -32,11 +32,12 @@ public class BulletMove : MonoBehaviour
             EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
             enemy.takeDamage(damage);
 
-            Vector2 force = new Vector2(forceImpact, 2f);
+            Vector2 force = new Vector2(forceImpact, 5f);
             if(collision.transform.position.x < transform.position.x)
             {
                 force.x *= -1;
             }
+
             collision.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
 
         }

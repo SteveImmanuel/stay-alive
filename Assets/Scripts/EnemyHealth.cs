@@ -76,7 +76,6 @@ public class EnemyHealth : MonoBehaviour, IPooledObject
 
         animator.SetBool("isDead", true);
         StartCoroutine(dieSequence());
-        //Destroy(gameObject, 1.5f);
     }
 
     IEnumerator dieSequence()

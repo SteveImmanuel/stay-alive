@@ -67,7 +67,7 @@ public class EnemyAttack : MonoBehaviour
 
             if (!player.isDead())
             {
-                Vector2 force = new Vector2(forceImpact, 2f);
+                Vector2 force = new Vector2(forceImpact, 5f);
                 if(collision.transform.position.x < transform.position.x)
                 {
                     force.x *= -1;

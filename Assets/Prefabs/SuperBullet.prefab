@@ -229,5 +229,5 @@ MonoBehaviour:
   speed: 1000
   smoothTime: 0.05
   damage: 20
-  forceImpact: 3
+  forceImpact: 5
   muzzleTag: SuperBulletMuzzle

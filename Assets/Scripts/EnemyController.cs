@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
     private float distance;
     private Vector3 velocity = Vector3.zero;
     private bool isChasing = false;
+    private bool isIdle = true;
     private EnemyAttack attackController;
     private CharacterAudio enemyAudio;
 
@@ -48,6 +49,7 @@ public class EnemyController : MonoBehaviour
             float distance = Vector3.Distance(target.transform.position, transform.position);
             if (distance <= lookRadius)
             {
+                isIdle = false;
                 if (target.position.x - transform.position.x > 0)
                 {
                     facingRight = 0;
@@ -68,6 +70,7 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
+                isIdle = true;
                 isChasing = false;
                 animator.SetBool("isChasing", false);
                 animator.SetBool("isTargetReachable", false);
@@ -76,6 +79,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
+            isIdle = true;
             isChasing = false;
             animator.SetBool("isChasing", false);
             animator.SetBool("isTargetDead", true);
@@ -95,9 +99,13 @@ public class EnemyController : MonoBehaviour
             Vector3 targetVelocity = transform.right * speed * Time.fixedDeltaTime;
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, smoothTime);
         }
-        else
+        else if(!isChasing && !isIdle)
         {
             rb.velocity = new Vector3(0, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, new Vector3(0, rb.velocity.y), ref velocity, smoothTime);
         }
     }
 

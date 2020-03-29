@@ -45,8 +45,8 @@ public class LevelLoader : MonoBehaviour
 
         if(SceneManager.GetActiveScene().buildIndex > 1) // change from main game
         {
-            AudioManager.instance.stopAllSound();
             StopCoroutine(AudioManager.instance.playRandomSound());
+            AudioManager.instance.stopAllSound();
         }
 
         StartCoroutine(changeSceneSequence(index));
