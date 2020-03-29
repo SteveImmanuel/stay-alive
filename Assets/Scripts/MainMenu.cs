@@ -7,17 +7,17 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
-        LevelLoader.instance.ChangeScene(SceneManager.GetActiveScene().buildIndex + 2);
+        LevelLoader.instance.swapScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     public void HighScore()
     {
-        LevelLoader.instance.ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LevelLoader.instance.swapScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void BackToMenu()
     {
-        LevelLoader.instance.ChangeScene(SceneManager.GetActiveScene().buildIndex - 1);
+        LevelLoader.instance.swapScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void Quit()

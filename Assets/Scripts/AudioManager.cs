@@ -26,12 +26,35 @@ public class Sound
 
     public void play()
     {
+        source.volume = volume;
         source.Play();
     }
 
     public void stop()
     {
         source.Stop();
+    }
+
+    public IEnumerator playWithFade()
+    {
+        source.volume = 0;
+        source.Play();
+        for (float i = 0; i <= volume; i += .05f)
+        {
+            source.volume = i;
+            yield return new WaitForSeconds(.05f);
+        }
+    }
+
+    public IEnumerator stopWithFade()
+    {
+        for(float i = source.volume; i > 0; i -= .05f)
+        {
+            source.volume = i;
+            yield return new WaitForSeconds(.1f);
+        }
+        source.Stop();
+        Debug.Log("audio stop");
     }
 
     public bool isPlaying()
@@ -68,31 +91,63 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void play(string name)
+    public void play(string name, bool fade=false, bool forcePlay = false)
     {
         Sound selected = Array.Find(soundList, sound => sound.name == name);
-        if (selected != null)
+        if (selected != null && (!selected.isPlaying() || forcePlay))
         {
-            selected.play();
+            if (fade)
+            {
+                StartCoroutine(selected.playWithFade());
+            }
+            else
+            {
+                selected.play();
+            }
         }
-        else
+        if (selected == null)
         {
             Debug.LogError("sound with name " + name + " not found");
         }
     }
 
-    public void stopMainTheme()
+    public void stop(string name, bool fade = false)
     {
-        Sound selected = Array.Find(soundList, sound => sound.name == "MainTheme");
-        selected.stop();
+        Sound selected = Array.Find(soundList, sound => sound.name == name);
+        if (selected != null && selected.isPlaying())
+        {
+            if (fade)
+            {
+                StartCoroutine(selected.stopWithFade());
+            }
+            else
+            {
+                selected.stop();
+            }
+        }
+        if (selected == null)
+        {
+            Debug.LogError("sound with name " + name + " not found");
+        }
     }
 
-    public void playMainTheme()
+    public IEnumerator playRandomSound()
     {
-        Sound selected = Array.Find(soundList, sound => sound.name == "MainTheme");
-        if (!selected.isPlaying())
+        yield return new WaitForSeconds(15f);
+        while (true)
         {
-            selected.play();
+            string soundName = "RandomNoise" + UnityEngine.Random.Range(1, 5);
+            Debug.Log("playing audio " + soundName);
+            play(soundName, true, true);
+            yield return new WaitForSeconds(15f);
+        }
+    }
+
+    public void stopAllSound()
+    {
+        foreach(Sound sound in soundList)
+        {
+            stop(sound.name, true);
         }
     }
 }

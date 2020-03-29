@@ -46,6 +46,6 @@ public class GameOver : MonoBehaviour
 
     public void BackToMenu()
     {
-        LevelLoader.instance.ChangeScene(0);
+        LevelLoader.instance.swapScene(0);
     }
 }

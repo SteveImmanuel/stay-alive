@@ -36,6 +36,7 @@ public class PlayerEnergy : MonoBehaviour
     private void Start()
     {
         UIController.instance.setEnergyBarMax(maxEnergy);
+        InvokeRepeating("playAudio", 0, .8f);
     }
 
     public void takeDamage(float damage)
@@ -101,6 +102,31 @@ public class PlayerEnergy : MonoBehaviour
         {
             UIController.instance.unglowEnergyBar();
         }
+
+    }
+
+    private void playAudio()
+    {
+        if(energy<= .1f * maxEnergy)
+        {
+            AudioManager.instance.stop("HalfLife");
+            AudioManager.instance.play("QuarterLife", false, true);
+        }
+        else if (energy <= .25f * maxEnergy)
+        {
+            AudioManager.instance.stop("HalfLife");
+            AudioManager.instance.play("QuarterLife");
+            
+        }else if(energy <= .5f * maxEnergy)
+        {
+            AudioManager.instance.stop("QuarterLife");
+            AudioManager.instance.play("HalfLife");
+        }
+        else
+        {
+            AudioManager.instance.stop("QuarterLife");
+            AudioManager.instance.stop("HalfLife");
+        }
     }
 
     public bool isDead()
@@ -111,6 +137,9 @@ public class PlayerEnergy : MonoBehaviour
     private void die()
     {
         dead = true;
+        AudioManager.instance.stop("QuarterLife");
+        AudioManager.instance.stop("HalfLife");
+        CancelInvoke("playAudio");
         GetComponent<PlayerController>().enabled = false;
         animator.SetBool("isJumping", false);
         animator.SetBool("isDead", true);

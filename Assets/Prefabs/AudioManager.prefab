@@ -47,40 +47,45 @@ MonoBehaviour:
   - name: MainTheme
     clip: {fileID: 8300000, guid: c24fff81e3e63c3499716b64cdaf6032, type: 3}
     loop: 1
-    volume: 0.722
+    volume: 0.471
     pitch: 1
   - name: BackgroundGame
     clip: {fileID: 8300000, guid: 93abc65fb0a7d9a47bb2f33a425869bb, type: 3}
-    loop: 0
-    volume: 0.213
+    loop: 1
+    volume: 0.43
     pitch: 1
   - name: RandomNoise1
     clip: {fileID: 8300000, guid: af6edb08e1f686041a968120f681aff9, type: 3}
     loop: 0
-    volume: 0.732
+    volume: 0.373
     pitch: 1
   - name: RandomNoise2
     clip: {fileID: 8300000, guid: 2d4abed0203b15f4e8d4c72eeb4d8d16, type: 3}
     loop: 0
-    volume: 0.732
+    volume: 0.396
     pitch: 1
   - name: RandomNoise3
     clip: {fileID: 8300000, guid: 0045f76525dcdd34dbf31cb4fa3563a5, type: 3}
     loop: 0
-    volume: 0.732
+    volume: 0.375
     pitch: 1
   - name: RandomNoise4
     clip: {fileID: 8300000, guid: 57f5f9fc49e59cb4ca4ae0d069d09f33, type: 3}
     loop: 0
-    volume: 0.732
+    volume: 0.449
     pitch: 1
   - name: NewWave
     clip: {fileID: 8300000, guid: f6dbb0ca03157fc468a0e05ae6c7f510, type: 3}
     loop: 0
     volume: 0.637
     pitch: 1
-  - name: RandomNoise3
-    clip: {fileID: 8300000, guid: af6edb08e1f686041a968120f681aff9, type: 3}
-    loop: 0
+  - name: HalfLife
+    clip: {fileID: 8300000, guid: ee2ebb4c4ca5fad40bdac20c3eeaae1a, type: 3}
+    loop: 1
+    volume: 0.732
+    pitch: 1
+  - name: QuarterLife
+    clip: {fileID: 8300000, guid: 64ed54603ea4bdc4c930044de83bdd69, type: 3}
+    loop: 1
     volume: 0.732
     pitch: 1

@@ -23,23 +23,36 @@ public class LevelLoader : MonoBehaviour
 
     void Start()
     {
-        if(SceneManager.GetActiveScene().buildIndex > 1) // not in main menu or highscore board
+        if (SceneManager.GetActiveScene().buildIndex <= 1)
         {
-            AudioManager.instance.stopMainTheme();
+            AudioManager.instance.play("MainTheme", false);
         }
         else
         {
-            AudioManager.instance.playMainTheme();
+            //play looping sound game
+            AudioManager.instance.play("BackgroundGame", true);
+            StartCoroutine(AudioManager.instance.playRandomSound());
         }
         animator = GetComponentInChildren<Animator>();
     }
 
-    public void ChangeScene(int index)
+    public void swapScene(int index)
     {
-        StartCoroutine(changeScene(index));
+        if(index > 1) // change to main game
+        {
+            AudioManager.instance.stop("MainTheme", true);
+        }
+
+        if(SceneManager.GetActiveScene().buildIndex > 1) // change from main game
+        {
+            AudioManager.instance.stopAllSound();
+            StopCoroutine(AudioManager.instance.playRandomSound());
+        }
+
+        StartCoroutine(changeSceneSequence(index));
     }
 
-    IEnumerator changeScene(int index)
+    IEnumerator changeSceneSequence(int index)
     {
         animator.SetTrigger("Change");
         yield return new WaitForSeconds(waitingTime);

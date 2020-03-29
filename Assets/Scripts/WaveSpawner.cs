@@ -51,6 +51,7 @@ public class WaveSpawner : MonoBehaviour
             if (timeUntilNextWave <= 0)
             {
                 UIController.instance.hideCountdown();
+                AudioManager.instance.play("NewWave", false, true);
                 waveIndex++;
                 spawnEnemy();
                 spawnEnergy();
