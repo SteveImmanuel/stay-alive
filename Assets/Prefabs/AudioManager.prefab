@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f43db40b44db94cb8ba55001f67e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixerGroup: {fileID: -6431641048088636438, guid: ba791fdf21add9d47b84fa53f2a538cd,
+    type: 2}
   soundList:
   - name: MainTheme
     clip: {fileID: 8300000, guid: c24fff81e3e63c3499716b64cdaf6032, type: 3}

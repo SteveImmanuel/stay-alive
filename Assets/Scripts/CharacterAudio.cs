@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class CharacterAudio : MonoBehaviour
 {
+    public AudioMixerGroup sfxMixerGroup;
     public AudioSource runningSource;
     public AudioClip sfxSound;
     [Range(0,1)]
@@ -18,6 +20,7 @@ public class CharacterAudio : MonoBehaviour
         runningSource.volume = volume;
         runningSource.pitch = pitch;
         runningSource.spatialBlend = spatialBlend;
+        runningSource.outputAudioMixerGroup = sfxMixerGroup;
     }
 
     public void setRunning(bool run)
@@ -41,6 +44,7 @@ public class CharacterAudio : MonoBehaviour
         tempAudioSource.volume = volume;
         tempAudioSource.pitch = pitch;
         tempAudioSource.spatialBlend = spatialBlend;
+        tempAudioSource.outputAudioMixerGroup = sfxMixerGroup;
         tempAudioSource.Play();
         Destroy(temp, 3f);
     }
@@ -54,6 +58,7 @@ public class CharacterAudio : MonoBehaviour
         tempAudioSource.volume = customVolume;
         tempAudioSource.pitch = pitch;
         tempAudioSource.spatialBlend = spatialBlend;
+        tempAudioSource.outputAudioMixerGroup = sfxMixerGroup;
         tempAudioSource.Play();
         Destroy(temp, 3f);
     }

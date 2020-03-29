@@ -431,6 +431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32f32d3abb8b9448b843b09f0cbbdbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxMixerGroup: {fileID: -144139493582554438, guid: ba791fdf21add9d47b84fa53f2a538cd,
+    type: 2}
   runningSource: {fileID: 554389577}
   sfxSound: {fileID: 8300000, guid: 6f8efae2a70a9f54cbdb5dc8dd4e9fd7, type: 3}
   volume: 0.729

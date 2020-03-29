@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+
 
 [System.Serializable]
 public class Sound
@@ -35,6 +37,11 @@ public class Sound
         source.Stop();
     }
 
+    public void setOutput(AudioMixerGroup mixerGroup)
+    {
+        source.outputAudioMixerGroup = mixerGroup;
+    }
+
     public IEnumerator playWithFade()
     {
         source.volume = 0;
@@ -66,8 +73,8 @@ public class Sound
 public class AudioManager : MonoBehaviour
 {
     [SerializeField]
+    public AudioMixerGroup musicMixerGroup;
     public Sound[] soundList;
-
     public static AudioManager instance;
 
     private void Awake()
@@ -88,6 +95,7 @@ public class AudioManager : MonoBehaviour
             GameObject temp = new GameObject("AudioSource_" + sound.name);
             temp.transform.SetParent(transform);
             sound.setSource(temp.AddComponent<AudioSource>());
+            sound.setOutput(musicMixerGroup);
         }
     }
 
