@@ -14,13 +14,39 @@ public class EnergyBar : MonoBehaviour
     public void glowImage()
     {
         fill.material = glowMaterial;
-        icon.material = glowMaterial;
+        if (icon != null)
+        {
+            icon.material = glowMaterial;
+        }
     }
 
     public void unglowImage()
     {
         fill.material = null;
-        icon.material = null;
+        if (icon != null)
+        {
+            icon.material = null;
+        }
+    }
+
+    public void setGlow(bool glow)
+    {
+        if (glow)
+        {
+            fill.material = glowMaterial;
+            if (icon != null)
+            {
+                icon.material = glowMaterial;
+            }
+        }
+        else
+        {
+            fill.material = null;
+            if (icon != null)
+            {
+                icon.material = null;
+            }
+        }
     }
 
     private void Awake()

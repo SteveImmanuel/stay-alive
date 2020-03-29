@@ -18,22 +18,18 @@ public class PlayerShoot : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerAudio = GetComponent<CharacterAudio>();
+        UIController.instance.setBarMax(UIController.BULLET_BAR_TYPE, holdTime);
     }
 
     void Update()
     {
-        //if (Input.GetButtonDown("Fire1"))
-        //{
-        //    PlayerEnergy.instance.takeDamage(energyCost);
-        //    ObjectPooler.instance.instantiateFromPool(bulletTag, spawnPoint.position, spawnPoint.rotation);
-        //    animator.SetBool("isShooting", true);
-        //    playerAudio.playSfxSound(.18f);
-        //    Invoke("stopShooting", .35f);
-        //}
-
         if (Input.GetButton("Fire1"))
         {
             currentHoldTime += Time.deltaTime;
+            if(currentHoldTime >= holdTime)
+            {
+                UIController.instance.setGlowMaterial(UIController.BULLET_BAR_TYPE, true);
+            }
         }
 
         if (Input.GetButtonUp("Fire1"))
@@ -54,7 +50,9 @@ public class PlayerShoot : MonoBehaviour
             animator.SetBool("isShooting", true);
             Invoke("stopShooting", .35f);
             currentHoldTime = 0;
+            UIController.instance.setGlowMaterial(UIController.BULLET_BAR_TYPE, false);
         }
+        UIController.instance.setBar(UIController.BULLET_BAR_TYPE, Mathf.Clamp(currentHoldTime, 0, holdTime));
     }
 
     private void stopShooting()

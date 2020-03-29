@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [HideInInspector]
+    public static string ENERGY_BAR_TYPE = "EnergyBar";
+    [HideInInspector]
+    public static string BULLET_BAR_TYPE = "BulletBar";
+
     public Text waveNowText;
     public Text zombieAliveText;
     public Text scoreText;
@@ -13,6 +18,7 @@ public class UIController : MonoBehaviour
     public GameObject messageCanvas;
     public GameObject player;
     public EnergyBar energyBar;
+    public EnergyBar bulletBar;
     public float openingSequenceDuration = 2f;
 
     private WaveSpawner waveSpawner;
@@ -115,24 +121,40 @@ public class UIController : MonoBehaviour
         waveCounter.SetActive(false);
     }
 
-    public void setEnergyBarMax(float max)
+    public void setBarMax(string barType, float max)
     {
-        energyBar.setMaxEnergy(max);
+        if(barType == ENERGY_BAR_TYPE)
+        {
+            energyBar.setMaxEnergy(max);
+        }
+        else
+        {
+            bulletBar.setMaxEnergy(max);
+        }
     }
 
-    public void setEnergyBar(float energy)
+    public void setBar(string barType, float max)
     {
-        energyBar.setEnergy(energy);
+        if (barType == ENERGY_BAR_TYPE)
+        {
+            energyBar.setEnergy(max);
+        }
+        else
+        {
+            bulletBar.setEnergy(max);
+        }
     }
 
-    public void glowEnergyBar()
+    public void setGlowMaterial(string barType, bool glow)
     {
-        energyBar.glowImage();
-    }
-
-    public void unglowEnergyBar()
-    {
-        energyBar.unglowImage();
+        if (barType == ENERGY_BAR_TYPE)
+        {
+            energyBar.setGlow(glow);
+        }
+        else
+        {
+            bulletBar.setGlow(glow);
+        }
     }
 
 }

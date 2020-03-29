@@ -35,7 +35,7 @@ public class PlayerEnergy : MonoBehaviour
 
     private void Start()
     {
-        UIController.instance.setEnergyBarMax(maxEnergy);
+        UIController.instance.setBarMax(UIController.ENERGY_BAR_TYPE, maxEnergy);
         InvokeRepeating("playAudio", 0, .8f);
     }
 
@@ -43,7 +43,7 @@ public class PlayerEnergy : MonoBehaviour
     {
         energy -= damage;
         energy = Mathf.Clamp(energy, 0, maxEnergy);
-        UIController.instance.setEnergyBar(energy);
+        UIController.instance.setBar(UIController.ENERGY_BAR_TYPE, energy);
         
         if (energy <= 0 && !dead)
         {
@@ -94,15 +94,7 @@ public class PlayerEnergy : MonoBehaviour
             takeDamage(-energyRate * Time.deltaTime);
         }
 
-        if (energyRate > 0)
-        {
-            UIController.instance.glowEnergyBar();
-        }
-        else
-        {
-            UIController.instance.unglowEnergyBar();
-        }
-
+        UIController.instance.setGlowMaterial(UIController.ENERGY_BAR_TYPE, energyRate > 0);
     }
 
     private void playAudio()
