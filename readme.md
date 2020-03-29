@@ -51,7 +51,7 @@ Kebanyakan *script* terutama yang membutuhkan animasi memerlukan sebuah *method*
 *Asset* gambar 2D dan audio yang digunakan adalah sebagai berikut:
 - **THE ZOMBIES - FREE SPRITES** - https://www.gameart2d.com/the-zombies-free-sprites.html
 - **THE ROBOT - FREE SPRITE** - https://www.gameart2d.com/the-robot---free-sprites.html
-- FREE GRAVEYARD PLATFORMER TILESET - https://www.gameart2d.com/free-graveyard-platformer-tileset.html
+- **FREE GRAVEYARD PLATFORMER TILESET** - https://www.gameart2d.com/free-graveyard-platformer-tileset.html
 - **Footstep(Snow and Grass)** - https://assetstore.unity.com/packages/audio/sound-fx/footstep-snow-and-grass-90678
 - **Futuristic Gun SoundFX** - https://assetstore.unity.com/packages/audio/sound-fx/weapons/futuristic-gun-soundfx-100851
 - **Grenade Sound FX** - https://assetstore.unity.com/packages/audio/sound-fx/grenade-sound-fx-147490
