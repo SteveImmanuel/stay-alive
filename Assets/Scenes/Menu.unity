@@ -282,7 +282,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 461731780}
+      - m_Target: {fileID: 2006261859}
         m_MethodName: setSfxVolume
         m_Mode: 0
         m_Arguments:
@@ -920,18 +920,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38000ba05d1df5b4e8a5bf264c262fbf, type: 3}
---- !u!114 &461731780 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5084689358699332927, guid: 38000ba05d1df5b4e8a5bf264c262fbf,
-    type: 3}
-  m_PrefabInstance: {fileID: 461731779}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f43db40b44db94cb8ba55001f67e1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &473024116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +1879,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 461731780}
+      - m_Target: {fileID: 2006261859}
         m_MethodName: setMusicVolume
         m_Mode: 0
         m_Arguments:
@@ -4443,7 +4431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Build Version: 1.1.1'
+  m_text: 'Build Version: 1.1.2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b5fb4a7ca1dcb374486415513316d4e8, type: 2}
   m_sharedMaterial: {fileID: -6565368366104815949, guid: b5fb4a7ca1dcb374486415513316d4e8,

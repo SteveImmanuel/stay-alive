@@ -168,16 +168,4 @@ public class AudioManager : MonoBehaviour
             stop(sound.name, true);
         }
     }
-
-    public void setMusicVolume(float volume)
-    {
-        audioMixer.SetFloat("musicVolume", volume);
-        PlayerPrefs.SetFloat("musicVolume", volume);
-    }
-
-    public void setSfxVolume(float volume)
-    {
-        audioMixer.SetFloat("sfxVolume", volume);
-        PlayerPrefs.SetFloat("sfxVolume", volume);
-    }
 }

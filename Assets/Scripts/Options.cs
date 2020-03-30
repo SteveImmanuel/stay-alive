@@ -13,4 +13,16 @@ public class Options : MonoBehaviour
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
     }
+
+    public void setMusicVolume(float volume)
+    {
+        AudioManager.instance.audioMixer.SetFloat("musicVolume", volume);
+        PlayerPrefs.SetFloat("musicVolume", volume);
+    }
+
+    public void setSfxVolume(float volume)
+    {
+        AudioManager.instance.audioMixer.SetFloat("sfxVolume", volume);
+        PlayerPrefs.SetFloat("sfxVolume", volume);
+    }
 }
