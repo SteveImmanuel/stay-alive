@@ -128,16 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -198,12 +188,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighDensityEffector (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!1 &38341446
@@ -427,12 +411,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -487,11 +465,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -839,12 +812,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -899,11 +866,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -2037,16 +1999,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2107,12 +2059,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighDensityEffector (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!1 &519059100
@@ -2595,6 +2541,7 @@ Transform:
   - {fileID: 2067312300}
   - {fileID: 248377016}
   - {fileID: 1699804475}
+  - {fileID: 2011051564}
   m_Father: {fileID: 1337060043}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2695,12 +2642,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2755,11 +2696,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -2854,12 +2790,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2915,11 +2845,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
 --- !u!4 &696211686 stripped
@@ -2935,16 +2860,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3055,12 +2970,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3115,11 +3024,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -3207,16 +3111,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3277,12 +3171,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighDensityEffector (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!1 &806813231
@@ -3322,16 +3210,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3392,12 +3270,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighDensityEffector (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!1 &839313280
@@ -3550,6 +3422,75 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 46.123688}
   m_EdgeRadius: 0
+--- !u!1001 &876327915
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 604018107}
+    m_Modifications:
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
+        type: 3}
+      propertyPath: m_Name
+      value: HighDensityEffector (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!1 &887166250
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,12 +4001,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4120,11 +4055,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -4389,12 +4319,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4449,11 +4373,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -4520,16 +4439,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4590,12 +4499,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighDensityEffector (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!4 &1262711864 stripped
@@ -4898,16 +4801,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4968,12 +4861,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighDensityEffector (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!1 &1509555252
@@ -5212,12 +5099,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5273,11 +5154,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
 --- !u!1 &1575905117
@@ -5322,12 +5198,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5382,11 +5252,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -5733,16 +5598,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5803,12 +5658,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighDensityEffector (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!1 &1775107246
@@ -6044,12 +5893,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6104,11 +5947,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -6765,12 +6603,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6825,11 +6657,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -6976,6 +6803,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961350289}
   m_CullTransparentMesh: 0
+--- !u!4 &2011051564 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
+    type: 3}
+  m_PrefabInstance: {fileID: 876327915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2034874013
 GameObject:
   m_ObjectHideFlags: 0
@@ -12449,14 +12282,8 @@ CompositeCollider2D:
         Y: 21199998
       - X: 291100000
         Y: 21399998
-      - X: 271400100
-        Y: 21399998
-      - X: 271400100
-        Y: 21400039
-      - X: 271400041
-        Y: 21400098
       - X: 271400000
-        Y: 21400098
+        Y: 21399998
       - X: 271400000
         Y: 31199998
       - X: 271100000
@@ -13022,12 +12849,6 @@ CompositeCollider2D:
       - X: -71400000
         Y: -119000000
       - X: -71400000
-        Y: -128599900
-      - X: -71400041
-        Y: -128599900
-      - X: -71400100
-        Y: -128599959
-      - X: -71400100
         Y: -128600000
       - X: -91000000
         Y: -128600000
@@ -13396,7 +13217,7 @@ CompositeCollider2D:
       - {x: 29.14, y: 0.99002945}
       - {x: 29.139988, y: 1.9700075}
       - {x: 29.109995, y: 1.9899999}
-      - {x: 27.14, y: 1.9900392}
+      - {x: 27.14, y: 1.9900292}
       - {x: 27.139988, y: 2.9700077}
       - {x: 27.109993, y: 2.9899998}
       - {x: 21.899992, y: 2.9899921}
@@ -13679,7 +13500,7 @@ CompositeCollider2D:
       - {x: 8.109993, y: -12.01}
       - {x: -7.100008, y: -12.010008}
       - {x: -7.14, y: -12.050011}
-      - {x: -7.1400394, y: -13.01}
+      - {x: -7.14003, y: -13.01}
       - {x: -9.100008, y: -13.010008}
       - {x: -9.14, y: -13.050011}
       - {x: -9.14003, y: -14.01}
@@ -13940,12 +13761,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AreaEffector
       objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921696, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 402426544769921697, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14000,11 +13815,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 402426544769921698, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b4e5d37bd7c15a4fb7985a471d3bffc, type: 3}
@@ -14089,16 +13899,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 604018107}
     m_Modifications:
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ColliderMask.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107721, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_ForceMagnitude
-      value: 400
-      objectReference: {fileID: 0}
     - target: {fileID: 5934534031710107722, guid: e518e9feb6397d04d85d8ca347059728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14159,12 +13959,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighDensityEffector
       objectReference: {fileID: 0}
-    - target: {fileID: 5934534031710107723, guid: e518e9feb6397d04d85d8ca347059728,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e518e9feb6397d04d85d8ca347059728, type: 3}
 --- !u!1001 &5239310111250000746
