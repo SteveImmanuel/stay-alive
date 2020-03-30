@@ -12,13 +12,14 @@
 - *Recharge station* dan *zombie* akan di-*respawn* setiap awal *wave*.
 - *Wave* akan berlanjut apabila pemain berhasil membunuh semua *zombie* yang ada di *map*.
 
-Beberapa fitur menarik dari game ini di antaranya:
+Beberapa hal menarik dari game ini di antaranya:
 - Konsep *lighting* yang berperan penting memberikan konsep horror.
 - Digunakan *shader graph* untuk membuat objek *glowing*.
-- Terdapat audio yang menyesuaikan dengan keadaan pemain.
+- Terdapat *audio* yang menyesuaikan dengan keadaan pemain.
 - Terdapat dua tipe *zombie*.
 - Terdapat dua tipe peluru.
 - Semua objek *spawning* menggunakan *pooling*.
+- Terdapat 25+ *custom script* yang dibuat sendiri.
 
 ## Cara Kerja
 Pada pengembangan game ini digunakan *design pattern singleton* yang memudahkan referensi suatu objek dari objek yang lain. 
@@ -27,7 +28,7 @@ Semua *art* dari game didapatkan secara gratis dari sumber di Internet. Karakter
 
 Gerakan karakter diatur dengan memanipulasi komponen kecepatan pada `rigidbody` suatu objek tergantung oleh input pengguna. Terdapat juga penambahan gaya untuk memberikan kesan *impact* ketika *zombie* terkena peluru.
 
-Seluruh audio diatur dalam suatu `audio mixer`. *Audio* pada *game* dibedakan menjadi *background music* dan *sfx*. Keduanya memiliki *channel* tersendiri dan bisa diatur pada *options menu* dari game. Agar *audio* terdengar maka diberikan `audio listener` pada objek `camera`. Kemudian diberikan pula *audio* source pada objek yang menimbulkan suara misalnya langkah kaki pemain, suara *zombie*, dan lain-lain. Suara *sfx* menggunakan *spatial blending* sehingga jarak sumber suara dengan pendengar mempengaruhi besar suara. Selain itu, terdapat *audio manager* yang memberikan *background music*. *Audio manager* ini bertugas memutar suara yang tidak menggunakan *spatial blending* seperti suara *theme song*, suara *random noise*, dan lain-lain.
+Seluruh audio diatur dalam suatu `audio mixer`. *Audio* pada *game* dibedakan menjadi *background music* dan *sfx*. Keduanya memiliki *channel* tersendiri dan bisa diatur pada *options menu* dari game. Agar *audio* terdengar maka diberikan `audio listener` pada objek `camera`. Kemudian diberikan pula `audio source` pada objek yang menimbulkan suara misalnya langkah kaki pemain, suara *zombie*, dan lain-lain. Suara *sfx* menggunakan *spatial blending* sehingga jarak sumber suara dengan pendengar mempengaruhi besar suara. Selain itu, terdapat *audio manager* yang memberikan *background music*. *Audio manager* ini bertugas memutar suara yang tidak menggunakan *spatial blending* seperti suara *theme song*, suara *random noise*, dan lain-lain.
 
 Pada peta diletakkan beberapa *point* untuk penanda tempat untuk *spawn* *zombie* dan *recharge station*. Kemudian semua proses *spawning* diatur oleh *game manager* dengan memilih tempat *spawn* tersebut secara *random*.
 
@@ -39,7 +40,7 @@ Peta dibuat menggunakan *tilemap system* yang tersedia dari Unity. Untuk `collid
 
 *Main menu* dan *scoreboard* dibuat pada `scene` terpisah dari *main game*. Pada *main menu* terdapat *options* untuk mengatur suara dan akan disimpan pada `playerprefs`. Pada *scoreboard* akan ditampilkan data 5 pemain dengan score tertinggi dari *scoreboard online*.
 
-*Script zombie* dibuat berparameter dan dapat diatur pada *inspector* di Unity untuk memundahkan pembuatan 2 tipe *zombie*. Contoh parameter yang di-*expose* adalah *damage*, kecepatan gerak, *attack rate*, *look radius*.
+*Script zombie* dibuat berparameter dan dapat diatur pada *inspector* di Unity untuk memundahkan pembuatan 2 tipe *zombie*. Contoh parameter yang di-*expose* adalah *damage*, kecepatan gerak, *attack rate*, *look radius*. *Zombie* dapat mengejar pemain ketika jaraknya kurang dari *look radius*.
 
 Peluru tembakan pemain juga terdapat dua jenis. Hal ini dilakukan dengan cara yang sama dengan *zombie*, yaitu mengubah *damage* dari peluru. Selain itu kedua jenis peluru juga memiliki perbedaan warna, perbedaan volume suara, dan perbedaan cara men-*trigger*. Peluru biasa dapat ditembakkan dengan menekan tombol tembak sebentar, sedangkan peluru yang lain ditembakkan dengan menahan tombol tembak selama satu detik lalu melepaskannya.
 
