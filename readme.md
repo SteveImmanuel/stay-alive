@@ -1,5 +1,7 @@
 # STAY ALIVE
 ## Deskripsi
+*Genre* : *Survival, Zombie, Horror*
+
 *Game* yang dibuat merupakan *game platformer* 2D dengan tema *survival*. Beberapa aturan dari *game* yang dibuat adalah:
 - Pemain akan di-*spawn* di sebuah *map* yang gelap yang penuh dengan *zombie*. 
 - Pemain memiliki energi yang terbatas untuk bertahan hidup.
@@ -12,7 +14,7 @@
 - *Recharge station* dan *zombie* akan di-*respawn* setiap awal *wave*.
 - *Wave* akan berlanjut apabila pemain berhasil membunuh semua *zombie* yang ada di *map*.
 
-Beberapa hal menarik dari game ini di antaranya:
+Beberapa hal menarik dari *game* ini di antaranya:
 - Konsep *lighting* yang berperan penting memberikan konsep horror.
 - Digunakan *shader graph* untuk membuat objek *glowing*.
 - Terdapat *audio* yang menyesuaikan dengan keadaan pemain.
@@ -22,10 +24,14 @@ Beberapa hal menarik dari game ini di antaranya:
 - Terdapat 25+ *custom script* yang dibuat sendiri.
 - Zombie dapat mengejar pemain
 
-## Cara Kerja
-Pada pengembangan game ini digunakan *design pattern singleton* yang memudahkan referensi suatu objek dari objek yang lain. 
+*Try it yourself! Download from:*
 
-Semua *art* dari game didapatkan secara gratis dari sumber di Internet. Karakter dianimasikan dengan mengubah-ubah *sprite* secara cepat dan bergantian. Semua animasi dikontrol oleh suatu *state machine* pada `animation controller` dan diatur dari *script*.
+https://drive.google.com/drive/u/5/folders/1ozeCt6qZgsN-8nLe9x7pflB87WaN4OIe?usp=sharing
+
+## Cara Kerja
+Pada pengembangan *game* ini digunakan *design pattern singleton* yang memudahkan referensi suatu objek dari objek yang lain. 
+
+Semua *art* dari *game* didapatkan secara gratis dari sumber di Internet. Karakter dianimasikan dengan mengubah-ubah *sprite* secara cepat dan bergantian. Semua animasi dikontrol oleh suatu *state machine* pada `animation controller` dan diatur dari *script*.
 
 Gerakan karakter diatur dengan memanipulasi komponen kecepatan pada `rigidbody` suatu objek tergantung oleh input pengguna. Terdapat juga penambahan gaya untuk memberikan kesan *impact* ketika *zombie* terkena peluru.
 
@@ -50,7 +56,7 @@ Semua objek yang di-*spawn* berulang-ulang disimpan dalam sebuah pool dan akan d
 Kebanyakan *script* terutama yang membutuhkan animasi memerlukan sebuah *method* yang dapat di-*trigger* setelah sekian detik, atau berulang setiap waktu tertentu. Hal tersebut dilakukan dengan menggunakan `coroutine` dan `invoke function`.
 
 ## *Library*
-*Asset* gambar 2D dan audio yang digunakan adalah sebagai berikut:
+*Asset* gambar 2D dan *audio* yang digunakan adalah sebagai berikut:
 - **THE ZOMBIES - FREE SPRITES** - https://www.gameart2d.com/the-zombies-free-sprites.html
 - **THE ROBOT - FREE SPRITE** - https://www.gameart2d.com/the-robot---free-sprites.html
 - **FREE GRAVEYARD PLATFORMER TILESET** - https://www.gameart2d.com/free-graveyard-platformer-tileset.html
@@ -70,7 +76,7 @@ Untuk *library* yang digunakan di antaranya adalah:
 ![](Screenshots/MainMenu.png)
 ### *Options Menu*
 ![](Screenshots/OptionMenu.png)
-### *Score Board*
+### *Scoreboard*
 ![](Screenshots/ScoreBoard.png)
 ### *Gameplay*
 ![](Screenshots/Gameplay1.png)
