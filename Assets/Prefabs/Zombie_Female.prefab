@@ -18,13 +18,13 @@ GameObject:
   - component: {fileID: 1779779541448238333}
   - component: {fileID: 802311831}
   - component: {fileID: 802311830}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Zombie_Female
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8333433784429076092
 Transform:
   m_ObjectHideFlags: 0

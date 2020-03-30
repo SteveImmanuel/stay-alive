@@ -53,7 +53,7 @@ public class PlayerEnergy : MonoBehaviour
 
     IEnumerator spawn()
     {
-        for(float i = 0f; i < 2f; i+=.01f)
+        for(float i = 0f; i < 2f; i+=.02f)
         {
             fade = i;
             material.SetFloat("_Fade", fade);
