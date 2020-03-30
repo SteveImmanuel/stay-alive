@@ -20,6 +20,7 @@ Beberapa hal menarik dari game ini di antaranya:
 - Terdapat dua tipe peluru.
 - Semua objek *spawning* menggunakan *pooling*.
 - Terdapat 25+ *custom script* yang dibuat sendiri.
+- Zombie dapat mengejar pemain
 
 ## Cara Kerja
 Pada pengembangan game ini digunakan *design pattern singleton* yang memudahkan referensi suatu objek dari objek yang lain. 
@@ -40,7 +41,7 @@ Peta dibuat menggunakan *tilemap system* yang tersedia dari Unity. Untuk `collid
 
 *Main menu* dan *scoreboard* dibuat pada `scene` terpisah dari *main game*. Pada *main menu* terdapat *options* untuk mengatur suara dan akan disimpan pada `playerprefs`. Pada *scoreboard* akan ditampilkan data 5 pemain dengan score tertinggi dari *scoreboard online*.
 
-*Script zombie* dibuat berparameter dan dapat diatur pada *inspector* di Unity untuk memundahkan pembuatan 2 tipe *zombie*. Contoh parameter yang di-*expose* adalah *damage*, kecepatan gerak, *attack rate*, *look radius*. *Zombie* dapat mengejar pemain ketika jaraknya kurang dari *look radius*.
+*Script zombie* dibuat berparameter dan dapat diatur pada *inspector* di Unity untuk memundahkan pembuatan 2 tipe *zombie*. Contoh parameter yang di-*expose* adalah *damage*, kecepatan gerak, *attack rate*, *look radius*. *Zombie* dapat mengejar pemain ketika jaraknya kurang dari *look radius*. Zombie dapat mengejar pemain. Zombie juga dapat melompati platform demi mengejar pemain. Hal tersebut diimplementasikan bukan dari *script zombie* namun dengan memberikan `area effector` di tempat-tempat tertentu yang hanya berefek pada *layer mask* zombie.
 
 Peluru tembakan pemain juga terdapat dua jenis. Hal ini dilakukan dengan cara yang sama dengan *zombie*, yaitu mengubah *damage* dari peluru. Selain itu kedua jenis peluru juga memiliki perbedaan warna, perbedaan volume suara, dan perbedaan cara men-*trigger*. Peluru biasa dapat ditembakkan dengan menekan tombol tembak sebentar, sedangkan peluru yang lain ditembakkan dengan menahan tombol tembak selama satu detik lalu melepaskannya.
 
