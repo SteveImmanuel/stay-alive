@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
     private bool isIdle = true;
     private EnemyAttack attackController;
     private CharacterAudio enemyAudio;
+    private bool isGrounded = false;
 
     private void Awake()
     {
@@ -97,7 +98,14 @@ public class EnemyController : MonoBehaviour
         if (isChasing)
         {
             Vector3 targetVelocity = transform.right * speed * Time.fixedDeltaTime;
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, smoothTime);
+            if (isGrounded)
+            {
+                rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, smoothTime);
+            }
+            else
+            {
+                rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, smoothTime * 5f);
+            }
         }
         else if(!isChasing && !isIdle)
         {
@@ -113,5 +121,21 @@ public class EnemyController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Platform")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Platform")
+        {
+            isGrounded = false;
+        }
     }
 }
